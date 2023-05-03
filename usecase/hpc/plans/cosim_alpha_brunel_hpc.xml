@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <settings>
     <co_simulation_action_plan>
-        <title>Test the cosim closed loop Nest to TVB</title>
-        <description>Test the cosim Nest to TVB</description>
+        <title>Run cosim closed loop Nest to TVB</title>
+        <description>Run cosim Nest to TVB</description>
         <variables>
             <!--    
                 The values for the variables under this section, 
@@ -78,6 +78,10 @@
                 <par_name>CO_SIM_SERVICES_DEPLOYMENT_XML</par_name>
                 <par_value>{CO_SIM_SERVICES_DEPLOYMENT_PATH}/co_sim_services_deployment_settings.xml</par_value>
             </par_005>
+            <par_006>
+                <par_name>CO_SIM_ENABLE_MONITORING</par_name>
+                <par_value>True</par_value>
+            </par_006>
         </parameters>
         <arrangement>
             <!-- 
@@ -122,21 +126,20 @@
                 <action_goal>CO_SIM_SIMULATION</action_goal>
                 <action_realm>NEST</action_realm>
                 <action_label>NEST_SIMULATOR</action_label>
-                <!-- <action_xml>cosim_nest_alphabrunel.xml</action_xml> -->
                 <action_xml>cosim_nest_alphabrunel_hpc.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_004>
             <action_006>
                 <action_type>CO_SIM_ACTION</action_type>
                 <action_goal>CO_SIM_INTERSCALE_HUB</action_goal>
-                <!-- <action_xml>cosim_interscalehub_alphabrunel_nest_to_tvb.xml</action_xml> -->
+                <action_label>INTERSCALE_HUB_NEST_TO_TVB</action_label>
                 <action_xml>cosim_interscalehub_alphabrunel_nest_to_tvb_hpc.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_006>
             <action_008>
                 <action_type>CO_SIM_ACTION</action_type>
                 <action_goal>CO_SIM_INTERSCALE_HUB</action_goal>
-                <!-- <action_xml>cosim_interscalehub_alphabrunel_tvb_to_nest.xml</action_xml> -->
+                <action_label>INTERSCALE_HUB_TVB_TO_NEST</action_label>
                 <action_xml>cosim_interscalehub_alphabrunel_tvb_to_nest_hpc.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_008>
@@ -145,7 +148,6 @@
                 <action_goal>CO_SIM_SIMULATION</action_goal>
                 <action_realm>TVB</action_realm>
                 <action_label>TVB_SIMULATOR</action_label>
-                <!-- <action_xml>cosim_tvb_alphabrunel.xml</action_xml> -->
                 <action_xml>cosim_tvb_alphabrunel_hpc.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_010>
