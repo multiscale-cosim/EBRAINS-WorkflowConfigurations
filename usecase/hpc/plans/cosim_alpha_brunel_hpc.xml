@@ -79,8 +79,12 @@
                 <par_value>{CO_SIM_SERVICES_DEPLOYMENT_PATH}/co_sim_services_deployment_settings.xml</par_value>
             </par_005>
             <par_006>
+                <!--
+                    NOTE: this parameter is required to enable/disable the
+                    resource usage monitoring.
+                -->
                 <par_name>CO_SIM_ENABLE_MONITORING</par_name>
-                <par_value>True</par_value>
+                <par_value>False</par_value>
             </par_006>
         </parameters>
         <arrangement>
