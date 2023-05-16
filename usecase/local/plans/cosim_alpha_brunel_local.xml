@@ -69,6 +69,14 @@
                 <par_name>CO_SIM_COMMUNICATION_SETTINGS_XML</par_name>
                 <par_value>{CO_SIM_COMMUNICATION_SETTINGS_PATH}/co_sim_comm_ports.xml</par_value>
             </par_004>
+            <par_005>
+                <!--
+                    NOTE: this parameter is required to enable/disable the
+                    resource usage monitoring.
+                -->
+                <par_name>CO_SIM_ENABLE_MONITORING</par_name>
+                <par_value>False</par_value>
+            </par_005>
         </parameters>
         <arrangement>
             <!-- 
@@ -118,13 +126,15 @@
             </action_004>
             <action_006>
                 <action_type>CO_SIM_ACTION</action_type>
-                <action_goal>CO_SIM_DATA_TRANSFORMATION</action_goal>
+                <action_goal>CO_SIM_INTERSCALE_HUB</action_goal>
+                <action_label>INTERSCALE_HUB_NEST_TO_TVB</action_label>
                 <action_xml>cosim_interscalehub_alphabrunel_nest_to_tvb.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_006>
             <action_008>
                 <action_type>CO_SIM_ACTION</action_type>
-                <action_goal>CO_SIM_DATA_TRANSFORMATION</action_goal>
+                <action_goal>CO_SIM_INTERSCALE_HUB</action_goal>
+                <action_label>INTERSCALE_HUB_TVB_TO_NEST</action_label>
                 <action_xml>cosim_interscalehub_alphabrunel_tvb_to_nest.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_008>
