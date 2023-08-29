@@ -26,5 +26,11 @@
             <MAX>59300</MAX>
             <MAX_TRIES>100</MAX_TRIES>
         </APPLICATION_MANAGER>
+        <APP_SERVER>
+            <MIN>52428</MIN>
+            <MAX>52428</MAX>
+            <MAX_TRIES>1</MAX_TRIES>
+        </APP_SERVER>
+
     </co_simulation_communication_settings>
 </settings>

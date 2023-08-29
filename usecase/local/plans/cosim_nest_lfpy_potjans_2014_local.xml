@@ -65,6 +65,14 @@
                 <par_name>CO_SIM_COMMUNICATION_SETTINGS_XML</par_name>
                 <par_value>{CO_SIM_COMMUNICATION_SETTINGS_PATH}/co_sim_comm_ports.xml</par_value>
             </par_003>
+             <par_004>
+                <!--
+                    NOTE: this parameter is required to enable/disable the
+                    resource usage monitoring.
+                -->
+                <par_name>CO_SIM_ENABLE_MONITORING</par_name>
+                <par_value>False</par_value>
+            </par_004>
         </parameters>
         <arrangement>
             <!-- 
